@@ -38,7 +38,7 @@ void matarBastardo(int ss);
 void escribirPid(int pid,int i);
 int leerPid(int i);
 void proyectarFichero();
-void desproyectarFichero();
+void desProyectarFichero();
 
 
 //SEÑALES
@@ -340,7 +340,7 @@ pb->p1 = pb->p2 = pb->p3 = 0;
 }
 
 
-void desproyectarFichero(){
+void desProyectarFichero(){
 if(-1 == munmap((void*)pb, sizeof(pids)) ) imprimirError("desProyectarFichero","munmap",NULL,getpid());
 if(-1 == close(descriptor) ) imprimirError("desProyectarFichero","close",NULL,getpid());
 }
